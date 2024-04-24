@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Rajkumar Thapa Magar - Home </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style1.css">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Sailor
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">Rajkumar Thapa Magar Cycle Shop</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+
+          <li class="dropdown"><a href="about.html"><span>Store</span></a>
+          </li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="getstarted">Enquire Us</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <!-- <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <div class="carousel-item active" style="background-image: url(bike39.png)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Rajkumar Thapa Magar Cycle Shop</span></h2>
+              <p class="animate__animated animate__fadeInUp"></p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="carousel-item" style="background-image: url(bike3.png)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Go To Shop</h2>
+              <p class="animate__animated animate__fadeInUp"></p>
+              <a href="#about.html" class="btn-get-started animate__animated animate__fadeInUp scrollto">SHOP</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="carousel-item" style="background-image: url()">
+          <div class="carousel-container">
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section> -->
+  <section>
+    <div class="container">
+      <div class="slider-wrapper">
+        <ul class="image-list">
+          <img class="image-item" src="bik11.png" alt="img-1" />
+          <img class="image-item" src="bike39.png" alt="img-2" />
+          <img class="image-item" src="bikee.png" alt="img-3" />
+          <img class="image-item" src="bikes.png" alt="img-4" />
+          <img class="image-item" src="bik11.png" alt="img-1" />
+          <img class="image-item" src="bike39.png" alt="img-2" />
+          <img class="image-item" src="bikee.png" alt="img-3" />
+          <img class="image-item" src="bikes.png" alt="img-4" />
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+    <script>
+      const initSlider = () => {
+        const imageList = document.querySelector(".slider-wrapper .image-list");
+        const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+        const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
+        const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+        const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+        
+        // Handle scrollbar thumb drag
+        scrollbarThumb.addEventListener("mousedown", (e) => {
+            const startX = e.clientX;
+            const thumbPosition = scrollbarThumb.offsetLeft;
+            const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+            
+            // Update thumb position on mouse move
+            const handleMouseMove = (e) => {
+                const deltaX = e.clientX - startX;
+                const newThumbPosition = thumbPosition + deltaX;
+                // Ensure the scrollbar thumb stays within bounds
+                const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+                const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+                
+                scrollbarThumb.style.left = `${boundedPosition}px`;
+                imageList.scrollLeft = scrollPosition;
+            }
+            // Remove event listeners on mouse up
+            const handleMouseUp = () => {
+                document.removeEventListener("mousemove", handleMouseMove);
+                document.removeEventListener("mouseup", handleMouseUp);
+            }
+            // Add event listeners for drag interaction
+            document.addEventListener("mousemove", handleMouseMove);
+            document.addEventListener("mouseup", handleMouseUp);
+        });
+        // Slide images according to the slide button clicks
+        slideButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const direction = button.id === "prev-slide" ? -1 : 1;
+                const scrollAmount = imageList.clientWidth * direction;
+                imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+            });
+        });
+         // Show or hide slide buttons based on scroll position
+        const handleSlideButtons = () => {
+            slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+            slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+        }
+        // Update scrollbar thumb position based on image scroll
+        const updateScrollThumbPosition = () => {
+            const scrollPosition = imageList.scrollLeft;
+            const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+            scrollbarThumb.style.left = `${thumbPosition}px`;
+        }
+        // Call these two functions when image list scrolls
+        imageList.addEventListener("scroll", () => {
+            updateScrollThumbPosition();
+            handleSlideButtons();
+        });
+    }
+    window.addEventListener("resize", initSlider);
+    window.addEventListener("load", initSlider);
+      
+    </script>
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <h2>Welcome To Rajkumar Thapa Magar Cycle Shop</h2>
+            <h5>Looking for quality bikes in Nepal? Look no further! Our Nepali Cycle Reseller brings you a wide range of bicycles that are not only stylish but also durable and reliable. Whether you're a casual rider or a passionate cyclist, we have the perfect bike for you. Explore our collection today and ride with confidence on Nepal's beautiful roads and trails. Unlock your cycling adventure with us!</h5>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <h3>Latest Vlog</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6B3GP9XD7_g?si=7TL8YnE8q8bn9bRm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg">
+      <div class="container">
+
+        <div class="row">
+
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Services Section ======= -->
+
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="featured-products" class="product-store">
+			<div class="container-md">
+				<div class="display-header d-flex align-items-center justify-content-between">
+					<h2 class="section-title text-uppercase">New Arrivals</h2>
+					<div class="btn-right">
+						<a href="about.html" class="d-inline-block text-uppercase text-hover fw-bold">View all</a>
+					</div>
+				</div>
+				<section>
+					<div class="container py-5">
+					  <div class="row">
+						<div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
+						  <div class="card">
+							<img src="overdrive.png"
+							  class="card-img-top" alt=""" />
+							<div class="card-body">
+							  <div class="d-flex justify-content-between">
+								<p class="small"><a href="about.html" class="text-muted">Go To Store</a></p>
+							  </div>
+							  <div class="d-flex justify-content-between mb-3">
+								<h5 class="mb-0">Overdrive</h5>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
+						  <div class="card">
+							<img src="gravelseries.png"
+							  class="card-img-top" alt=""" />
+							<div class="card-body">
+							  <div class="d-flex justify-content-between">
+								<p class="small"><a href="about.html" class="text-muted">Go To Store</a></p>
+							  </div>
+							  <div class="d-flex justify-content-between mb-3">
+								<h5 class="mb-0">Gravel Series - Freedom</h5>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
+						  <div class="card">
+							<img src="marlinS.png"
+							  class="card-img-top" alt=""" />
+							<div class="card-body">
+							  <div class="d-flex justify-content-between">
+								<p class="small"><a href="about.html" class="text-muted">Go To Store</a></p>
+							  </div>
+							  <div class="d-flex justify-content-between mb-3">
+								<h5 class="mb-0">GTA Marlin S</h5>
+							  </div>
+							</div>
+						  </div>
+						</div>
+					</div>
+				  </section>
+			</div>
+		</section>
+<main>
+
+    <div class="container">
+      <h2 style="padding-left: 5.5%;">Happy Costumers</h2>
+      <div class="slider-wrapper">
+        <ul class="image-list">
+          <img class="image-item" src="H1.png" alt="img-1" />
+          <img class="image-item" src="H2.png" alt="img-2" />
+          <img class="image-item" src="H3.png" alt="img-3" />
+          <img class="image-item" src="H4.png" alt="img-4" />
+        </ul>
+      </div>
+    </div>
+</main>
+
+    <section>
+
+    </section>
+    <section>
+
+      
+    </section>
+
+  <!-- ======= Footer ======= -->
+      <footer id="footer" class="py-5 border-top">
+        <div class="container-lg">
+        <div class="row">
+          <div class="col-lg-2 pb-3">
+          <div class="footer-menu">
+            <h5 class="widget-title pb-2">Location</h5>
+              <div class="col-lg-2 pb-3">
+                  <div class="footer-menu">
+                      <iframe style="height:300px; width: 300px; margin-left: 20px;"
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.3753268917094!2d85.35598757617531!3d27.73656722420088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b4571e69597%3A0xb144cfdbddd7401e!2sRajkumar%20Thapa%20Magar%20Cycle%20and%20Rental!5e0!3m2!1sen!2snp!4v1713636932599!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </div>
+      </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
